@@ -12,17 +12,17 @@ public class Human {
         } else {
             this.yearOfBirth = 0;
         }
-        if (name == null || name == "") {
+        if (name == null || name.isEmpty()) {
             this.name = " Please write information";
         } else {
             this.name = name;
         }
-        if (town == null || town == "") {
+        if (town == null || town.isEmpty()) {
             this.town = " Please write information";
         } else {
             this.town = town;
         }
-        if (jobTitle == null || jobTitle == "") {
+        if (jobTitle == null || jobTitle.isEmpty()) {
             jobTitle = " Please write information";
         } else {
             this.jobTitle = jobTitle;
@@ -33,16 +33,48 @@ public class Human {
             return this.yearOfBirth;
     }
 
+    public void setYearOfBirth(int yearOfBirth) {
+        if (yearOfBirth >= 0) {
+            this.yearOfBirth = yearOfBirth;
+        } else {
+            this.yearOfBirth = 0;
+        }
+    }
+
     public String getName() {
         return this.name;
+    }
+
+    public void setName(String name) {
+        if (name == null || name.isEmpty()) {
+            this.name = " Please write information";
+        } else {
+            this.name = name;
+        }
     }
 
     public String getTown() {
         return this.town;
     }
 
+    public void setTown(String town) {
+        if (town == null || town.isEmpty()) {
+            this.town = " Please write information";
+        } else {
+            this.town = town;
+        }
+    }
+
     public String getJobTitle() {
         return jobTitle;
+    }
+
+    public void setJobTitle(String jobTitle) {
+        if (jobTitle == null || jobTitle.isEmpty()) {
+            jobTitle = " Please write information";
+        } else {
+            this.jobTitle = jobTitle;
+        }
     }
 
     public String toString() {
